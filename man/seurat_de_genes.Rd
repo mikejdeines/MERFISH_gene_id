@@ -3,7 +3,8 @@
 \name{seurat_de_genes}
 \alias{seurat_de_genes}
 \title{Finds DE genes between all pairs of clusters in a Seurat object.
-Calculates a DE score equal to -log10(padj). Max score = 300.}
+Calculates a DE score equal to -log10(padj). Max score = 300.
+Use this function for datasets with < 100 clusters.}
 \usage{
 seurat_de_genes(seuratobject, log_threshold = 2, min_pct = 0.5)
 }
@@ -20,4 +21,5 @@ a data.frame of differentially-expressed genes between all pairs of clusters.
 \description{
 Finds DE genes between all pairs of clusters in a Seurat object.
 Calculates a DE score equal to -log10(padj). Max score = 300.
+Use this function for datasets with < 100 clusters.
 }
