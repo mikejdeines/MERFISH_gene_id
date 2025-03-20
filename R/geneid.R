@@ -121,6 +121,7 @@ chunk_permutations <- function(combinations, optimal_chunk_number){
   return(perm_list)
 }
 identify.de.genes.wilcoxon <- function(combinations, seuratobject, log_threshold, min_pct){
+  require(Seurat)
   #' Identifies DE genes using a Wilcoxon rank-sum test.
   #' @param combinations a Matrix of identity combinations
   #' @param seuratobject a Seurat object
@@ -143,6 +144,7 @@ identify.de.genes.wilcoxon <- function(combinations, seuratobject, log_threshold
   return(output)
 }
 identify.de.genes.deseq2 <- function(combinations, seuratobject, log_threshold, min_pct){
+  require(DESeq2)
   #' Identifies DE genes using DESeq2.
   #' @param combinations a Matrix of identity combinations
   #' @param seuratobject a Pseudobulked Seurat object
